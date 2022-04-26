@@ -15,7 +15,7 @@
   --first-footer-color: #ffffff;
   --second-footer-color: #2196f3;
   --third-footer-color: rgba(255, 255, 255, 0.6);
-  --first-shadow-color: rgba(0, 0, 0, 0.15);
+  --form-shadow-color: rgba(0, 0, 0, 0.15);
   --first-line-color: #ECECEC;
   --second-line-color: #EEEEEE;
   --first-shadow-color: rgba(0, 0, 0, 0.12);
@@ -26,6 +26,7 @@
   --sixth-shadow-color: rgba(0, 0, 0, 0.1);
   --seventh-shadow-color: rgba(0, 0, 0, 0.08);
   --first-icon-color: #AFB1B8;
+  --second-icon-color: #000000;
   --first-link-background-color: rgba(255, 255, 255, 0.1);
   --overlay-color: rgba(47, 48, 58, 0.4);
   --second-overlay-color: rgba(0, 0, 0, 0.2);
@@ -34,6 +35,7 @@
   --design-color: rgba(0, 0, 0, 0.1);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --first-border-color: rgba(33, 33, 33, 0.2);
+  --second-border-color:rgba(255, 255, 255, 0.3);
   --first-placeholder-color:rgba(117, 117, 117, 0.5)
 }
 
@@ -588,7 +590,6 @@ color: var(--second-page-color);
 
 .footer-socials {
   min-width: 206px;
-
 }
 
 .footer-address {
@@ -610,6 +611,95 @@ color: var(--second-page-color);
   background-color: var(--accent-color); 
 }
 
+.footer-form-wrapper {
+  display: flex;
+  margin-left: auto;
+}
+
+
+.footer-form {
+display: flex;
+align-items: flex-end;
+}
+
+.footer-form-action {
+min-width: 358px;               
+margin-right: 12px;
+}
+
+.footer-form-action-text {
+display: block;
+margin-bottom: 20px;
+
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: var(--first-footer-color)
+}
+
+.footer-form-input {
+  transition: border-color 250ms var(--timing-function);
+  outline: none;
+
+  display: block;
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid var(--second-border-color);
+  filter: drop-shadow(0px 4px 4px var(--form-shadow-color));
+  border-radius: 4px;
+
+  background-color: transparent;
+  color: var(--first-footer-color);
+}
+
+.footer-form-input::placeholder {
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: 0.03em;
+
+color: var(--third-footer-color);
+}
+
+.footer-form-input:hover,
+.footer-form-input:focus {
+  border-color: var(--accent-color);
+}
+
+.footer-form-btn {
+  transition: scale 250ms var(--timing-function);
+
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 10px 28px;
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px var(--form-shadow-color);
+
+  background-color: var(--accent-color); 
+}
+
+.footer-form-btn:active {
+  transform: scale(0.95); 
+}
+
+.footer-form-btn-text {
+  margin-right:10px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--second-page-color);
+}
+
+.footer-form-icon {
+  fill: var(--second-accent-color);
+}
 /* ----------------portfolio our works----------------------------------- */
 .works {
   padding-top: 94px;
@@ -759,8 +849,7 @@ color: var(--second-page-color);
 }
 
 .modal-close-btn {
-  transition: scale 250ms var(--timing-function),
-  fill 250ms var(--timing-function);
+  transition: scale 250ms var(--timing-function);
   position: absolute;
   top: 8px;
   right: 8px;
@@ -777,13 +866,18 @@ color: var(--second-page-color);
   background-color: transparent;
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  fill: var(--accent-color);
-}
-
 .modal-close-btn:active {
   transform: scale(0.95); 
+}
+
+.modal-close-icon {
+  transition:fill 250ms var(--timing-function);
+  fill: var(--second-icon-color);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon{
+  fill: var(--accent-color);
 }
 
 .contact-form-action {
@@ -833,6 +927,8 @@ color: var(--third-page-color);
 }
 
 .contact-form-message {
+  transition: border-color 250ms var(--timing-function);
+
   width: 100%;
   height: 120px;
   resize: none;
@@ -841,8 +937,6 @@ color: var(--third-page-color);
   border: 1px solid var(--first-border-color);
   border-radius: 4px;
   padding: 12px 16px;
-
-  transition: border-color 250ms var(--timing-function);
 }
 
 .contact-form-message:hover,
@@ -901,8 +995,6 @@ letter-spacing: 0.03em;
 color: var(--accent-color);
 }
 
-
-
 .contact-form-checkbox-label::before {
   content: "";
   transition: background-color 250ms var(--timing-function),
@@ -945,7 +1037,7 @@ text-align: center;
 letter-spacing: 0.06em;
 color: var(--second-accent-color);
 background: var(--accent-color);
-box-shadow: 0px 4px 4px var(--first-shadow-color);
+box-shadow: 0px 4px 4px var(--form-shadow-color);
 border-radius: 4px;
 }
 

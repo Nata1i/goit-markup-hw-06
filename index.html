@@ -431,11 +431,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-form-wrapper">
+                <form name="subscribe-form" class="footer-form">
+                    <div  class="footer-form-action">
+                        <p class="footer-form-action-text">Подпишитесь на рассылку</p> 
+                        <input name="user_mail" class="footer-form-input" type="email" placeholder="E-mail">
+                    </div>
+                    <button type="submit" class="btn footer-form-btn">
+                        <span class="footer-form-btn-text">Подписаться</span> 
+                        <svg class="footer-form-icon"
+                        height="24"
+                        width="24">
+                            <use href="./images/icons.svg.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
     </footer>
 <!-- is-hidden -->
-    <div class="backdrop " data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close-btn" data-modal-close>
                 <svg class="modal-close-icon"
@@ -445,7 +461,7 @@
                 </svg>
             </button>
             <b class="contact-form-action">Оставьте свои данные, мы вам перезвоним</b>
-            <form  class="contact-form">
+            <form name="order_form" class="contact-form">
                 <label class="contact-form-field">
                      <span class="contact-form-text">Имя</span>
                     <span class="contact-form-input-wrapper">
@@ -481,7 +497,7 @@
                 </label>
                 <label class="contact-form-field">
                     <span class="contact-form-text">Комментарий</span>
-                    <textarea name="user_message" class="contact-form-message" name="" placeholder="Введите текст"></textarea>
+                    <textarea name="user_message" class="contact-form-message"  placeholder="Введите текст"></textarea>
                 </label>
                 <div class="contact-form-checkbox-wrapper">
                     <input name="accept_policy" type="checkbox" class="contact-form-checkbox visually-hidden " required id="policy-checkbox">
