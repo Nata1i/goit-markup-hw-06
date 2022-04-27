@@ -612,19 +612,11 @@ color: var(--second-page-color);
 }
 
 .footer-form-wrapper {
-  display: flex;
   margin-left: auto;
 }
 
-
 .footer-form {
 display: flex;
-align-items: flex-end;
-}
-
-.footer-form-action {
-min-width: 358px;               
-margin-right: 12px;
 }
 
 .footer-form-action-text {
@@ -645,8 +637,9 @@ color: var(--first-footer-color)
   outline: none;
 
   display: block;
-  width: 100%;
   padding: 15px 16px;
+  min-width: 358px;               
+  margin-right: 12px;
   border: 1px solid var(--second-border-color);
   filter: drop-shadow(0px 4px 4px var(--form-shadow-color));
   border-radius: 4px;
@@ -679,6 +672,12 @@ color: var(--third-footer-color);
   height: 50px;
   box-shadow: 0px 4px 4px var(--form-shadow-color);
 
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--second-page-color);
   background-color: var(--accent-color); 
 }
 
@@ -686,18 +685,8 @@ color: var(--third-footer-color);
   transform: scale(0.95); 
 }
 
-.footer-form-btn-text {
-  margin-right:10px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--second-page-color);
-}
-
 .footer-form-icon {
+  margin-left:10px;
   fill: var(--second-accent-color);
 }
 /* ----------------portfolio our works----------------------------------- */
